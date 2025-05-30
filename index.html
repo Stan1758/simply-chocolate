@@ -25,11 +25,17 @@
   <body>
     <!--Header section-->
     <header class="page-header">
-      <div class="container-header">
+      <div class="container">
         <a href="./index.html" class="logo-link"
           ><span class="logo-link-part"> SIMPLY </span> CHOCOLATE
-          <svg width="24" height="d24" class="logo-link">
+          <svg width="21" height="21" class="logo-link">
             <use href="./img/icons/icons.svg#chocolate"></use>
+          </svg>
+        </a>
+        <a href="" class="menu-icon"
+          >
+          <svg width="28" height="28" class="menu-icon-svg">
+            <use href="./img/icons/menu-icon.svg"></use>
           </svg>
         </a>
         <nav>
@@ -65,10 +71,11 @@
             </svg>
           </li>
         </ul>
+        
       </div>
     </header>
 
-    <main>
+    <main class="visually-hidden">
       <!-- Hero section-->
       <section class="hero">
         <div class="container">
@@ -82,7 +89,7 @@
             <a class="hero-scroll" href="#page-footer"
               >scroll down<span class="hero-scrol-icon"
                 ><svg width="22" height="22">
-                  <use href="./images/icons.svg#arrow"></use></svg
+                  <use href="./img/icons/arrow.svg"></use></svg
               ></span>
               ></a
             >
@@ -98,7 +105,7 @@
             <li class="benefits-list-item">
               <div class="icon-wrapper">
                 <svg width="32" height="32">
-                  <use href="./img/icons.svg#chocolate"></use>
+                  <use href="./img/icons/chocolate.svg"></use>
                 </svg>
               </div>
               <h3 class="benefits-subtitle">Unsurpassed taste</h3>
@@ -111,7 +118,7 @@
             </li>
             <li class="benefits-list-item">
               <svg width="32" height="32">
-                  <use href="./img/icons.svg#coin"></use>
+                  <use href="./img/icons/coin.svg"></use>
                 </svg>
               </div>
               <h3 class="benefits-subtitle">Affordable price</h3>
@@ -125,7 +132,7 @@
             </li>
             <li class="benefits-list-item">
               <svg width="32" height="32">
-                  <use href="./img/icons.svg#spoon"></use>
+                  <use href="./img/icons/spoon.svg"></use>
                 </svg>
               </div>
               <h3 class="benefits-subtitle">Own production</h3>
@@ -185,7 +192,7 @@
       <section class="made" id="made">
         <div class="container">
           <h2>How it’s made?</h2>
-          <img src="./img/image.png" alt="Chocolate-cook" width="600" />
+          <img class="made-img" src="#" alt="Chocolate-cook" />
           <h3>
             Try our chocolates today and discover the perfect balance of flavor
           </h3>
@@ -353,7 +360,7 @@
       </section>
     </main>
 
-    <footer class="page-footer" id="page-footer">
+    <footer class="page-footer visually-hidden" id="page-footer">
       <h2>Chocolate a delicious cure for a bad day</h2>
       <div>
         <p>Social networks</p>

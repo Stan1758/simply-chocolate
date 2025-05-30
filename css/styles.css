@@ -1,3 +1,5 @@
+/* #region root */
+
 :root {
   --black: #111;
   --orange: #fd9222;
@@ -10,7 +12,9 @@
   --marker-border: #eceded;
   --animation: 250mc cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+* {
+  /* outline: 1px solid red; */
+}
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--black);
@@ -39,11 +43,29 @@ a {
 button {
   cursor: pointer;
 }
+.section {
+  margin-bottom: 80px;
+}
+.section:last-child {
+  margin-bottom: 0;
+}
+
 .container {
-  max-width: 1168px;
+  max-width: 375px;
   margin: 0 auto;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 .visually-hidden {
   position: absolute;
@@ -55,26 +77,55 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/* #endregion root */
 
 /* #region header*/
+.header,
+.container {
+  padding-top: 20px;
+  display: flex;
+}
+.menu-icon-svg {
+  fill: #111;
+}
+.logo-link-part {
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.03em;
+  color: var(--black);
+}
+.logo-link {
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.03em;
+  color: var(--black);
+}
 .logo-links {
   display: inline-flex;
   align-items: center;
   margin-left: 32px;
   width: 40px;
 }
-.container-header {
+.page-header.container {
   display: flex;
   align-items: center;
 }
 .header-nav {
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-grow: 1;
   justify-content: ;
   gap: 24px;
 }
 .social-list {
-  display: flex;
+  display: none;
+  /* display: flex; */
   gap: 14px;
   margin-left: 90px;
 }
@@ -117,7 +168,7 @@ button {
   line-height: 1.21;
   letter-spacing: -0.03em;
   color: #fff;
-  width: 484px;
+  /* width: 484px; */
   margin-bottom: 32px;
 }
 .btn-buy,
@@ -131,7 +182,7 @@ button {
   background-color: #fd9222;
   border: 1px solid #fd9222;
   border-radius: 100px;
-  width: 144px;
+  /* width: 144px; */
   height: 45px;
   margin-right: 14px;
 }
@@ -198,7 +249,7 @@ button {
 
 .benefits-list-item {
   display: flex;
-  width: calc((100% - 2 * 88px) / 3);
+  /* width: calc((100% - 2 * 88px) / 3); */
 }
 
 .benefits-subtitle {
@@ -228,7 +279,7 @@ button {
 }
 /* #endregion Benefits */
 
-/* ingridients */
+/* #region ingridients */
 .ingridients {
   padding-top: 20px;
   padding-bottom: 50px;
@@ -268,4 +319,9 @@ button {
 .ing-list-item:nth-child(4n + 3) {
   background: var(--violet);
   color: var(--white);
+}
+/* #endregion ingridients */
+
+.made-img {
+  width: fit-content;
 }
