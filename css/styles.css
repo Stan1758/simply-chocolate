@@ -8,6 +8,7 @@
   --white: #fff;
   --marker-body: #4c4c4c;
   --marker-border: #eceded;
+  --animation: 250mc cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -55,7 +56,7 @@ button {
   overflow: hidden;
 }
 
-/* header*/
+/* #region header*/
 .logo-links {
   display: inline-flex;
   align-items: center;
@@ -77,6 +78,21 @@ button {
   gap: 14px;
   margin-left: 90px;
 }
+.social-link {
+  transition: color var(--animation), border var(--animation);
+}
+
+.social-link:hover,
+.social-link:focus {
+  border: 1px solid rgba(253, 146, 34, 0.1);
+  color: var(--orange);
+}
+
+.social-img {
+  fill: currentColor;
+}
+/* #endregion header*/
+
 /* #region Hero */
 
 .hero {
@@ -84,6 +100,11 @@ button {
 }
 .hero-container {
   background: rgba(17, 17, 17, 0.7);
+  background-color: ;
+  background-image: linear-gradient(rgba(17, 17, 17, 0.4))
+    url(../img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 380px;
   padding-bottom: 40px;
   border-radius: 30px;
@@ -120,10 +141,18 @@ button {
   border-radius: 100px;
   width: 183px;
   height: 45px;
-  display: inline-block;
+  display: inline-flex;
   padding-top: 14px;
   padding-left: 40px;
+  margin-left: auto;
   margin-right: 585px;
+}
+.hero-scroll:hover .hero-scroll-icon {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.hero-scroll-icon svg {
+  fill: currentColor;
 }
 
 .btn-buy:hover,
@@ -138,6 +167,9 @@ button {
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 14;
 }
 
 .hero-link:hover,
@@ -146,6 +178,9 @@ button {
 .hero-scroll:hover,
 .hero-scroll:focus {
   color: #fd9222;
+}
+
+.hero-scroll-icon {
 }
 /* #endregion Hero */
 
@@ -162,6 +197,7 @@ button {
 }
 
 .benefits-list-item {
+  display: flex;
   width: calc((100% - 2 * 88px) / 3);
 }
 
@@ -178,6 +214,17 @@ button {
   line-height: 1.29;
   letter-spacing: -0.02em;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.icon-wrapper {
+  width: 62px;
+  height: 62px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
 }
 /* #endregion Benefits */
 
